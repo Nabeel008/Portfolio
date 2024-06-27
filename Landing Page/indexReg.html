@@ -9,33 +9,43 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="script.js">
+        <form action="" name="Formfill" onsubmit="return validation()">
             <h1>Registration</h1>
+            <p id="result"></p>
             <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
+                <input type="text" name="FullName" placeholder="Full Name">
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="email" placeholder="Email" required>
+                <input type="email" name="Email" placeholder="Email" required>
                 <i class='bx bxs-envelope'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Password" required>
+                <input type="password" name="Password" placeholder="Password">
                 <i class='bx bxs-lock-alt' ></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Confirm Password" required>
+                <input type="password" name="cPassword" placeholder="Confirm Password">
                 <i class='bx bxs-lock-alt' ></i>
             </div>
             <!-- <div class="remember-forgot">
                 <label><input type="checkbox"> Remember me</label>
                 <a href=".//Landing Page/index.html">Forgot Password? </a>
             </div> --->
-            <button type="submit" class="btn">Register</button>
+            <div class="button">
+                <input type="submit" class="btn" onclick="validation()" value="Register">
+            </div>
             <div class="register-link">
-                <p>Already have an account? <a href="indexLog.html">Login</a></p>
+                <p>Already have an account? <a href="#">Login</a></p>
         </div>
         </form>
     </div>
+    <div class="popup" id="popup">
+        <i class='bx bx-check-circle'></i>
+        <h2>Thank You</h2>
+        <p>Your Registration was Successfully Completed. </p>
+        <a href="indexLog.html"><button onclick="closeSlide">OK</button></a>
+    </div>
+    <script src="Script.js"></script>
 </body>
 </html>
